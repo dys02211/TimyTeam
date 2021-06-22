@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.member">
+	<resultMap id="memResult" type="memberVO">
+		<result property="timySerialNo" column="timySerialNo" />
+        <result property="username" column="username" />
+        <result property="yearofbirth" column="yearofbirth" />
+        <result property="gender" column="gender" />
+        <result property="addr" column="addr" />
+        <result property="illness" column="illness" />
+        <result property="mobile1" column="mobile1" />
+        <result property="mobile2" column="mobile2" />
+        <result property="emerg" column="emerg" />
+	</resultMap> 
+	<!-- 
+	<resultMap id="memResult" type="java.util.HashMap">
+      <result property="id" column="id" />
+      <result property="pwd" column="pwd" />
+      <result property="name" column="name" />
+      <result property="email" column="email" />
+      <result property="joinDate" column="joinDate" />
+   </resultMap> -->
+
+	<!-- 티미 넘버순으로 listMembers정렬 -->
+	<select id="selectAllMemberList" resultMap="memResult">
+      <![CDATA[
+         select * from userinfo	order by timySerialNo asc	 	
+      ]]>
+	</select>
+<!-- 
+	<select id="selectName" resultType="String">
+    <![CDATA[
+	select name from userinfo
+	where id = 'hong'			
+    ]]>
+	</select>
+	
+	<select id="selectPwd" resultType="int" >
+	  <![CDATA[ 
+	    select pwd from t_member 
+	    where id = 'hong'
+	 ]]>
+	 </select> 
+	  -->
+	  <!-- searchMember관련 -->
+	<select id="selectMemberById" resultType="memberVO"  parameterType="String" >
+      <![CDATA[
+         select * from userinfo
+         where
+         timySerialNo=#{timySerialNo}			
+      ]]>
+	 </select>	
+	
+	<select id="selectMemberByPwd" resultMap="memResult"  parameterType="int" >
+      <![CDATA[
+         select * from t_member
+         where
+         pwd = #{pwd}			
+      ]]>
+    </select>
+    
+      <!-- warning뜬 사용자 정보 출력 -->
+	<select id="selectMemberByWarning" resultMap="memResult">
+      <![CDATA[
+			select timySerialNo,username,yearofbirth,gender,addr,illness,mobile1,mobile2,emerg 
+			from userinfo 
+			where 
+			emerg='1'			
+      ]]>
+	 </select>
+    
+    <!-- addMember -->
+     <insert id="insertMember"  parameterType="memberVO">
+		<![CDATA[
+		 insert into userinfo(timySerialNo, username, yearofbirth, gender, addr, illness, mobile1, mobile2)
+		 values(#{timySerialNo}, #{username}, #{yearofbirth}, #{gender}, #{addr}, #{illness}, #{mobile1}, #{mobile2})
+		]]>      
+	</insert>
+	
+	<insert id="insertMember2"  parameterType="java.util.HashMap">
+		<![CDATA[
+			 insert into userinfo(timySerialNo, username, yearofbirth, gender, addr, illness, mobile1, mobile2)
+			 values(#{timySerialNo}, #{username}, #{yearofbirth}, #{gender}, #{addr}, #{illness}, #{mobile1}, #{mobile2})
+		]]>      
+   </insert>
+   
+   <!-- updateMember -->
+   <update id="updateMember"  parameterType="memberVO">
+     <![CDATA[
+	     update userinfo
+	     set username=#{username}, yearofbirth=#{yearofbirth}, addr=#{addr}, illness=#{illness}, mobile1=#{mobile1}, mobile2=#{mobile2}, emerg=#{emerg}
+	     where
+	     timySerialNo=#{timySerialNo}
+      ]]>      
+   </update> 
+     
+   <!-- update emerg -->
+   <update id="updateEmergMember"  parameterType="memberVO">
+     <![CDATA[
+	     update userinfo
+	     set emerg=#{emerg}
+	     where
+	     timySerialNo=#{timySerialNo}
+      ]]>      
+   </update> 
+   
+    <!-- removeMember -->
+   <delete id="deleteMember"  parameterType="String">
+	<![CDATA[
+	   delete from  userinfo
+	   where
+	   timySerialNo=#{timySerialNo}
+	]]>      
+  </delete>
+  
+
+	
+	<!-- 동적 SQL문 -->
+  <select id="searchMember" parameterType="memberVO" resultMap="memResult">
+      <![CDATA[
+          select * from userinfo
+      ]]>
+      <where>
+         <if test=" username != ''  and  username != null">
+            username=#{username}
+         </if>
+         <if test="addr != ''  and addr != null ">
+           and addr = #{addr}
+         </if>
+      </where>
+      order by yearofbirth asc
+  </select>
+  
+ <!--  
+   <sql id="a">
+    <![CDATA[
+      select * from t_member
+     ]]> 
+   </sql>  -->  
+  
+<!--    
+  <select id="searchMember" parameterType="memberVO" resultMap="memResult">
+	     <include refid="a" /> 
+	   <![CDATA[
+         select * from t_member 
+      ]]>
+	  
+       <where>
+		  <choose>
+		      <when test="name != '' and name != null and  email != '' and email != null">
+			     name=#{name} and email=#{email}
+		      </when>
+		      <when test="name != '' and name != null">
+			     name = #{name}
+		      </when>
+		      <when test="email !='' and email != null">
+			    email = #{email}
+		      </when>
+	      </choose>
+       </where>
+       order by joinDate desc
+   </select> 
+  -->
+ <!--  
+   <select id="foreachSelect" resultMap="memResult" parameterType="java.util.Map">
+      <include refid="a" />
+      <![CDATA[
+        select * from t_member 
+          
+      ]]>
+      
+      where name in
+      <foreach item="item" collection="list" open="(" separator="," close=")" >
+         #{item}
+      </foreach>
+      order by joinDate desc
+   </select>
+   
+   <insert id="foreachInsert"  parameterType="java.util.Map">
+      <foreach item="item"  collection="list"   open="INSERT ALL" separator=" " close="SELECT * FROM DUAL" >
+          INTO  t_member(id, pwd, name, email)
+          VALUES  (#{item.id},
+                    #{item.pwd},
+                    #{item.name},
+                    #{item.email})
+      </foreach>
+   </insert>
+ -->  
+   <!--  like 검색 -->
+   <!--
+   <select id="selectLike" resultMap="memResult"  parameterType="String" >
+      <![CDATA[
+         select * from t_member
+         where
+         name like '%' || #{name} || '%'		
+      ]]>
+    </select>
+     --> 
+</mapper>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+      PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.warning">
+	<resultMap id="warningResult" type="warningVO">
+		<result property="timySerialNo" column="timySerialNo" />
+		<result property="warningDate" column="warningDate" />
+        <result property="solYN" column="solYN" />
+	</resultMap> 
+	
+	<!-- select all warning -->
+	<select id="selectAllWarningList" resultMap="warningResult">
+      <![CDATA[
+         select * from warning
+      ]]>
+	</select>
+	
+	<!-- insert warning -->
+	<insert id="insertWarning"  parameterType="warningVO">
+		<![CDATA[
+		 insert into warning(timySerialNo, solYN)
+		 values(#{timySerialNo}, #{solYN})
+		]]>      
+	</insert>
+	
+	 <!-- solYN update warning -->
+   <update id="updateWarning"  parameterType="warningVO">
+     <![CDATA[
+	     update warning
+	     set solYN=#{solYN}
+	     where
+	     timySerialNo=#{timySerialNo} and warningDate=#{warningDate}
+      ]]>      
+   </update> 
+   
+</mapper>
