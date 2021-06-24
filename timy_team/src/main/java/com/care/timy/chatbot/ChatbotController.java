@@ -26,7 +26,7 @@ public class ChatbotController {
 	
 	
 	
-	@RequestMapping(value="/chatbotTTS",method = RequestMethod.POST,produces ="application/text; charset=UTF-8")
+	@RequestMapping(value="/chatbot//chatbotTTS",method = RequestMethod.POST,produces ="application/text; charset=UTF-8")
 	@ResponseBody
 	public String chatbotTTS(@RequestParam("message") String message) {
 		String result = "";
@@ -36,7 +36,7 @@ public class ChatbotController {
 		return result;
 	}
 	
-	@RequestMapping(value="/chatbotOnlyVoice",produces ="application/text; charset=UTF-8")
+	@RequestMapping(value="/chatbot//chatbotOnlyVoice",produces ="application/text; charset=UTF-8")
 	@ResponseBody
 	public String clovaSTT4(@RequestParam("uploadFile") MultipartFile file){
 		String result = "";
@@ -70,14 +70,14 @@ public class ChatbotController {
 	}
 	
 		
-	@RequestMapping(value="/chatbotCall",method = RequestMethod.POST,produces ="application/text; charset=UTF-8")
+	@RequestMapping(value="/chatbot/chatbotCall",method = RequestMethod.POST,produces ="application/text; charset=UTF-8")
 	@ResponseBody
 	public String chatbot(@RequestParam("message") String message) {
 		String result = chatService.main(message);			
 		return result;  
 	}
 	
-	@RequestMapping(value="/chatbotCallJSON",method = RequestMethod.POST,produces ="application/text; charset=UTF-8")
+	@RequestMapping(value="/chatbot//chatbotCallJSON",method = RequestMethod.POST,produces ="application/text; charset=UTF-8")
 	@ResponseBody
 	public String chatbotCallJSON(@RequestParam("message") String message) {
 		String result = chatService.mainJSON(message);			
@@ -85,7 +85,7 @@ public class ChatbotController {
 	}
 	
 	// 챗봇 : 음성 메시지를 텍스트로 변환
-	@RequestMapping(value="/clovaSTT2",produces ="application/text; charset=UTF-8")
+	@RequestMapping(value="/chatbot//clovaSTT2",produces ="application/text; charset=UTF-8")
 	@ResponseBody
 	public String STT2(@RequestParam("uploadFile") MultipartFile file) {
 		String result = "";

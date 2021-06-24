@@ -6,9 +6,9 @@
 	<head> 
 		<meta charset="UTF-8">
 		<title> 챗봇 채팅창</title>
-		<script src="<c:url value='resources/js/jquery-3.6.0.min.js'/>"></script>
-		<script src="<c:url value='resources/js/chatbot2.js'/>"></script>
-		<link rel="stylesheet" type="text/css" href="resources/css/chatbot.css">
+		<script src="<c:url value='/resources/js/jquery-3.6.0.min.js'/>"></script>
+		<script src="<c:url value='/resources/js/chatbot2.js'/>"></script>
+		<link rel="stylesheet" type="text/css" href="../resources/css/chatbot.css">
 	</head>
 	<body>
 		<div id="wrap">

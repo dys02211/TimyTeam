@@ -49,6 +49,13 @@ public class HomeController {
 		
 		return "/chatbot/chatForm2";
 	}
+	
+	@RequestMapping(value = "/pose", method = RequestMethod.GET)
+	public String pose(Locale locale, Model model) {
+		
+		
+		return "pose/pose";
+	}
 
 //	@RequestMapping(value = "/stt", method = RequestMethod.GET)
 //	public String stt(Locale locale, Model model) {
