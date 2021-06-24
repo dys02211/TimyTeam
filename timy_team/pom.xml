@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.care</groupId>
 	<artifactId>timy</artifactId>
-	<name>spring-crud-v3</name>
+	<name>TimyTeam</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
