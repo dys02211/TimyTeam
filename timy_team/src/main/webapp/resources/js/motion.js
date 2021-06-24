@@ -62,6 +62,7 @@
 			status = "emergency";
 		}
 
+
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
