@@ -38,7 +38,7 @@
     }
 
     async function loop(timestamp) {
-        webcam.update(); // 웹캠 프레임을 업데이트하다
+        webcam.update(); 
         await predict();
         window.requestAnimationFrame(loop);
     }
@@ -55,9 +55,10 @@
 		} else if(prediction[1].probability.toFixed(2) == 1.00){
 			if(status == "neutral"){
 
-				var audio = new Audio('emerg.mp3');
-				audio.play();
-
+				//var audio = new Audio('emerg.mp3');
+				//audio.play();
+			alert('응급 구조 요청')
+			//왼손을 들면 구조요청
 				}
 			status = "emergency";
 		}
