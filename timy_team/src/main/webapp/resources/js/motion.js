@@ -43,6 +43,8 @@
         window.requestAnimationFrame(loop);
     }
 
+   var status = "neutral";
+	
     async function predict() {
         // 예측 #1: posenet을 통해 입력 실행
         // 이미지, 비디오 또는 캔버스 html 요소를 포함할 수 있는 추정 Pose
