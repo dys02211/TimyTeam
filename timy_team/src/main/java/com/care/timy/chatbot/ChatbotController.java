@@ -77,7 +77,7 @@ public class ChatbotController {
 		return result;  
 	}
 	
-	@RequestMapping(value="/chatbot//chatbotCallJSON",method = RequestMethod.POST,produces ="application/text; charset=UTF-8")
+	@RequestMapping(value="/chatbot/chatbotCallJSON",method = RequestMethod.POST,produces ="application/text; charset=UTF-8")
 	@ResponseBody
 	public String chatbotCallJSON(@RequestParam("message") String message) {
 		String result = chatService.mainJSON(message);			

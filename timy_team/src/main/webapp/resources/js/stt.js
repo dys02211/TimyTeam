@@ -4,8 +4,8 @@
 
 
 $('audio').hide();
-//$('$warningForm').hide();
-$('$userinfoForm').hide();
+//$('#warningForm').hide();
+$('#userinfoForm').hide();
 var cnt = 0;
 
  $(function(){
