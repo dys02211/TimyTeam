@@ -5,7 +5,7 @@
 
 $('audio').hide();
 //$('$warningForm').hide();
-$('$userinfoForm').hide();
+$('#userinfoForm').hide();
 var cnt = 0;
 
  $(function(){
