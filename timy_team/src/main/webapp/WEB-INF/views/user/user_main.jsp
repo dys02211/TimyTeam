@@ -12,7 +12,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Speech To Text</title>
-		<script src="<c:url value='../resources/js/jquery-3.6.0.min.js'/>"></script>
+		<script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<%-- <script src="<c:url value='../resources/js/jquery-3.6.0.min.js'/>"></script> --%>
 		<script src="<c:url value='../resources/js/stt.js'/>"></script>
 		<script src="<c:url value='../resources/js/voiceRecord.js'/>"></script>
 	</head>

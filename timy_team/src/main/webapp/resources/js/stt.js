@@ -4,7 +4,11 @@
 
 
 $('audio').hide();
+<<<<<<< HEAD
 //$('$warningForm').hide();
+=======
+//$('#warningForm').hide();
+>>>>>>> branch 'timy' of https://github.com/dys02211/TimyTeam.git
 $('#userinfoForm').hide();
 var cnt = 0;
 
