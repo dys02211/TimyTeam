@@ -116,7 +116,7 @@ public class AIServiceImpl implements AIService {
 	                
 	                 voiceFileName = "tts_" + tempname +  ".mp3";
 	                
-	                File f = new File("c:/ai/" + voiceFileName); //반환값(저장되는 파일명)
+	                File f = new File("/home/ai/" + voiceFileName); //반환값(저장되는 파일명)
 	                
 	                f.createNewFile();
 	                OutputStream outputStream = new FileOutputStream(f);

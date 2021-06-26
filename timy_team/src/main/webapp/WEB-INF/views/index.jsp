@@ -2,44 +2,74 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8"> 
-<title>INDEX</title>
-<style type="text/css">
-	table {
-		margin: 0 auto;
-		border: 1px black solid;
-		border-collapse: collapse;
-		width : 900px;
-		height: 500px;
+	<head>
+		<meta charset="UTF-8"> 
+		<title>INDEX</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	    <!-- Bootstrap core CSS -->
+	    <link href="./resources/css/bootstrap.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="./resources/css/style.css" rel="stylesheet">
+	    <link href="./resources/css/elusive-webfont.css" rel="stylesheet" >
+	    <link href="./resources/css/animate.css" rel="stylesheet">
+	    
+	    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+	    
+		<script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	    <!-- <script src="./resources/js/jquery.min.js"></script>
+		<script  src="./resources/js/modernizr.custom.js" type="text/javascript"></script> -->
+	</head>
+ 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+		<div id="navbar-main">
+	      <!-- Fixed navbar -->
+		    <div class="navbar navbar-default navbar-fixed-top">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		          	<i class="el-icon-lines"></i>
+		          </button>
+		          <a class="navbar-brand hidden-xs hidden-sm" href="#home"><h1>Timy</h1></a>
+		        </div>
+		        <div class="navbar-collapse collapse">
+		          	<ul class="nav navbar-nav">
+			            <li> <a href="#home" class="smoothScroll">Home</a></li>
+						<li> <a href="./about.jsp" class="smoothScroll">About</a></li>
+						<li> <a href="./member/listMembers.do" class="smoothScroll">관리자</a></li>					
+						<li> <a href="./member/warning.do" class="smoothScroll">모니터링</a></li>
+						<li> <a href="./user/user_main.do" class="smoothScroll">사용자</a></li>
+						<li> <a href="./chatbot/chat2" class="smoothScroll">챗봇</a></li>
+						<li> <a href="./pose" class="smoothScroll">모션인식</a></li>
+					</ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
+		</div>
+	    
+   		<!-- ==== HEADERWRAP ==== -->
+	    <div id="headerwrap" id="home" name="home">
+			<header class="clearfix">
+	  		 		<h1 class="animated bounceIn">Timy</h1>
+	  		 		<p class="animated slideInLeft">티미 서비스 입니다</p>
+	  		 		<p class="animated slideInRight">환영합니다</p>
+	  		 		<a href="#about" class="btn homebtn smoothScroll">티미사용설명서<i class="el-icon-chevron-down homeicon"></i></a>
+	  		</header>	 
+	  		<img src="./resources/images/bg1.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1536px; height: 1023.36px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -186.68px;" />  
+	    </div><!-- /headerwrap -->
+
+   		<!-- ==== HEADERWRAP ==== -->
+	    <div id="about" name="about"> 
+	    	여기는 티미야 설명페이지 입니다.
+	  	</div><!-- /headerwrap -->
 		
-	}
-	
-	td {
-		border: 1px black solid;
-		font-size: 20px;
-		text-align: center;
-	}
-</style>
-</head>
-<body>
-<h1 align="center">테스트 목록</h1>
-<table> 
-	<thead>
-		<tr><td>번호</td><td>테스트내용</td><td>Start View</td></tr>
-	</thead>
-	<tbody>
-		<tr><td>1</td><td>Translation</td><td><a href="http://localhost:9090/spring-ai/trans">http://localhost:9090/spring-ai/trans</a></td></tr>
-		<tr><td>2</td><td>STT</td><td><a href="http://localhost:9090/spring-ai/stt">http://localhost:9090/spring-ai/stt</a></td></tr>
-		<tr><td>3</td><td>TSS</td><td><a href="http://localhost:9090/spring-ai/tts">http://localhost:9090/spring-ai/tts</a></td></tr>
-		<tr><td>4</td><td>Warning</td><td><a href="http://localhost:9090/timy/member/warning.do">http://localhost:9090/timy/member/warning.do</a></td></tr><tr><td>5</td><td>Chatbot1</td><td>사용하지 않음</td></tr>
-		<tr><td>6</td><td>Chatbot2</td><td><a href="http://localhost:9090/timy/chatbot/chat2">http://localhost:9090/timy/chatbot/chat2</a></td></tr>
-		<tr><td>7</td><td>HOME</td><td><a href="http://localhost:9090/spring-ai/home">http://localhost:9090/spring-ai/home</a></td></tr>
-		<tr><td>8</td><td>Members All</td><td><a href="http://localhost:9090/timy/member/listMembers.do">http://localhost:9090/timy/member/listMembers.do</a></td></tr>
-		<tr><td>9</td><td>team1</td><td><a href="http://localhost:9090/timy/user/user_main.do">http://localhost:9090/timy/user/user_main.do</a></td></tr>
-		<tr><td>10</td><td></td><td></td></tr>
-	</tbody>
-	
-</table>
-</body>
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+		<!-- <script type="text/javascript" src="./resources/js/bootstrap.js"></script> -->
+	    <!-- <script type="text/javascript" src="./resources/js/plugins.js"></script> --><!-- 스크롤 -->
+		<!-- <script type="text/javascript" src="./resources/js/init.js"></script> -->
+			
+		
+	</body>
 </html>

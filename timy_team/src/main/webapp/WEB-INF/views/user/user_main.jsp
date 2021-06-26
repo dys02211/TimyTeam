@@ -41,8 +41,6 @@
            <input type="submit" value="결과 확인">
 		</form><br><br>		
 				
-		<!-- <h2>STT : 음성 파일을 텍스트로 변환한 결과</h2>	
-		<div id="resultDiv"></div><br><br>	 -->
 		<br><br>
 
 		<!--  warning TBL select all 추후 숨기기? -->
@@ -64,15 +62,8 @@
 		</table>		
 		
 		<!-- 숨김, 화면에 안보임 -->
-		<!-- 티미 경고 데이터 update form-->
-		<%-- <form id="warningForm" method="post" action="${contextPath}/warning/addWarning.do" style="/* visibility: hidden; */">
-			<h2>STT : 음성 파일을 텍스트로 변환한 결과</h2>	
-			티미시리얼번호:<input type="text" id="timyid" name="timySerialNo" value="1"/><br/>
-			DB emrg 경고들어갈 메시지 : <input type="text" name="solYN" value="N"/><br/>
-			결과값:<input type="text" id="resultDiv"/>
-		</form> --%>
 		<!-- userinfo TBL 위험값으로 변경 -->		
-		<form id="userinfoForm" method="post" action="${contextPath}/member/updateWarningMember.do" style="/* visibility: hidden; */">
+		<form id="userinfoForm" method="post" action="${contextPath}/member/updateWarningMember.do">
 			티미시리얼번호:<input type="text" id="utimyid" name="timySerialNo" value="1"/><br/>
 			DB emrg 경고들어갈 메시지 : <input type="text" name="emerg" value="1"/>
 		</form>

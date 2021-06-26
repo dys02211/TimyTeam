@@ -46,7 +46,7 @@ public class ChatbotController {
 				//웰컴 메시지 받기 위해 질문 내용 빈 값으로 설정
 				result = "";		
 			} else {
-				String uploadPath = "c:/ai/";
+				String uploadPath = "/home/ai/";
 				String originalFilename = file.getOriginalFilename();
 				// 3. 파일 생성
 				String filePathName = uploadPath + originalFilename;
@@ -92,7 +92,7 @@ public class ChatbotController {
 		
 		try {
 			//1. 파일 저장 경로 설정 : 실제 서비스 되는 위치 (프로젝트 외부에 저장)
-			  String uploadPath =  "c:/ai/";
+			  String uploadPath =  "/home/ai/";
 			  
 			  //2.원본 파일 이름
 			  String originalFileName = file.getOriginalFilename();  
