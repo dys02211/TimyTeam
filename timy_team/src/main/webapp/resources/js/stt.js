@@ -73,6 +73,7 @@ var cnt = 0;
 			data:{message:result},
 			success:function(result){				
 				$('audio').prop("src", '/ai/' + result)[0].play();
+				setTimeout(function() {	$("#userinfoForm").submit(); }, 10000);
 			},
 			error:function(e){
 				alert("에러 발생 : " + e);

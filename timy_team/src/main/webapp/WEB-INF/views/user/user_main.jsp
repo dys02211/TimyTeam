@@ -51,6 +51,8 @@
 			<td ><b>티미</b></td>
 			<td><b>일자</b></td>
 			<td><b>경고해결여부</b></td>
+			<td><b>해결일자</b></td>
+			<td><b>비고</b></td>
 		</tr>
 		
 		<%-- <jsp:include page="${contextPath}/user/warningData.do" flush="false"/> --%>
@@ -58,19 +60,14 @@
 		<tr align="center">
 			<td>${warning.timySerialNo}</td>
 			<td>${warning.warningDate}</td>
-			<td>${warning.solYN}</td>		
+			<td>${warning.solYN}</td>
+			<td>${warning.solDate}</td>
+			<td>${warning.bigo}</td>		
 		</tr>
 		</c:forEach>
 		</table>		
 		
 		<!-- 숨김, 화면에 안보임 -->
-		<!-- 티미 경고 데이터 update form-->
-		<%-- <form id="warningForm" method="post" action="${contextPath}/warning/addWarning.do" style="/* visibility: hidden; */">
-			<h2>STT : 음성 파일을 텍스트로 변환한 결과</h2>	
-			티미시리얼번호:<input type="text" id="timyid" name="timySerialNo" value="1"/><br/>
-			DB emrg 경고들어갈 메시지 : <input type="text" name="solYN" value="N"/><br/>
-			결과값:<input type="text" id="resultDiv"/>
-		</form> --%>
 		<!-- userinfo TBL 위험값으로 변경 -->		
 		<form id="userinfoForm" method="post" action="${contextPath}/member/updateWarningMember.do" style="/* visibility: hidden; */">
 			티미시리얼번호:<input type="text" id="utimyid" name="timySerialNo" value="1"/><br/>
