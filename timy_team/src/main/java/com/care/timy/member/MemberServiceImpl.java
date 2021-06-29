@@ -59,4 +59,11 @@ public class MemberServiceImpl implements MemberService {
 		int result = memberDAO.updateEmergMember(memberVO);
 		return result;
 	}
+	// pose
+	@Override
+	public int updateMember2(MemberVO memberVO) throws DataAccessException {
+		// TODO Auto-generated method stub
+		int result = memberDAO.updateMember(memberVO);
+		return result;
+	}
 }

@@ -4,9 +4,9 @@
 
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
-	alert('Test');
+	alert('js 연결확인1');
     // 사용 중인 모델에 대한 링크(Teachable Machine 내보내기 패널)
-    const URL = "resources/my_model/";
+    const URL = "../resources/my_model/";
     let model, webcam, ctx, labelContainer, maxPredictions;
  
     async function init() {
@@ -56,11 +56,15 @@
 			status = "neutral";
 		} else if(prediction[1].probability.toFixed(2) == 1.00){
 			if(status == "neutral"){
-
 				//var audio = new Audio('emerg.mp3');
 				//audio.play();
-			alert('응급 구조 요청')
-			//왼손을 들면 구조요청
+				
+				
+				//왼손을 들면 구조요청
+				alert('응급 구조 요청')
+				
+				
+				
 				}
 			status = "emergency";
 		}

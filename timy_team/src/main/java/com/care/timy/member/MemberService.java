@@ -14,4 +14,6 @@ public interface MemberService {
 	 public int removeMember(String timySerialNo) throws DataAccessException;
 	 public MemberVO searchMember(String timySerialNo) throws DataAccessException;
 	 public List warningMember() throws DataAccessException;
+	 // pose
+	 public int updateMember2(MemberVO memberVO) throws DataAccessException;
 }

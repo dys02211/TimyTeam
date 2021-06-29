@@ -19,4 +19,7 @@ public interface MemberController {
 	public ModelAndView updateEmergMember(@ModelAttribute("member") MemberVO member, HttpServletRequest request, HttpServletResponse response) throws Exception;
 	ModelAndView pose(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	
+	// pose
+	public ModelAndView updateMember2(@ModelAttribute("info") MemberVO memberVO,HttpServletRequest request, HttpServletResponse response) throws Exception;
+	
 }
