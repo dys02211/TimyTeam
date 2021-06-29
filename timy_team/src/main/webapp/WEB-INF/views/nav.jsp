@@ -29,7 +29,7 @@
 						<li> <a href="${contextPath}/member/warning.do" class="smoothScroll">모니터링</a></li>
 						<li> <a href="${contextPath}/user/user_main.do" class="smoothScroll">사용자</a></li>
 						<li> <a href="${contextPath}/chatbot/chat2" class="smoothScroll">챗봇</a></li>
-						<li> <a href="${contextPath}/pose" class="smoothScroll">모션인식</a></li>
+						<li> <a href="${contextPath}/pose/pose.do" class="smoothScroll">모션인식</a></li>
 					</ul>
 		        </div><!--/.nav-collapse -->
 		      </div>
