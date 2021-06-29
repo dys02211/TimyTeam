@@ -40,7 +40,7 @@
 						<li> <a href="./member/warning.do" class="smoothScroll">모니터링</a></li>
 						<li> <a href="./user/user_main.do" class="smoothScroll">사용자</a></li>
 						<li> <a href="./chatbot/chat2" class="smoothScroll">챗봇</a></li>
-						<li> <a href="./pose" class="smoothScroll">모션인식</a></li>
+						<li> <a href="./pose/pose.do" class="smoothScroll">모션인식</a></li>
 					</ul>
 		        </div><!--/.nav-collapse -->
 		      </div>
