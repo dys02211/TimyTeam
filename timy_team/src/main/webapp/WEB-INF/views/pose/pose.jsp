@@ -31,7 +31,14 @@
 					<tr bgcolor="spacegray">
 						<th><b>TimyNo.</b></th>
 						<th><b>이름</b></th>
+						<th><b>출생년도</b></th>
+						<th><b>성별</b></th>
+						<th><b>주소</b></th>
+						<th><b>지병</b></th>
+						<th><b>연락처1</b></th>
+						<th><b>연락처2</b></th>
 						<th><b>경고여부</b></th>
+						<th><b>삭제</b></th>
 					</tr>
 				</thead>
 			   
@@ -40,7 +47,14 @@
 						<tr>
 						   	<td>${member.timySerialNo}</td>
 							<td>${member.username}</td>
+							<td>${member.yearofbirth}</td>
+							<td>${member.gender}</td>
+							<td>${member.addr}</td>
+							<td>${member.illness}</td>
+							<td>${member.mobile1}</td>
+							<td>${member.mobile2}</td>
 							<td>${member.emerg}</td>
+							<td>${member.timySerialNo }</td>
 						</tr>
 					</c:forEach>   
 				</tbody>
