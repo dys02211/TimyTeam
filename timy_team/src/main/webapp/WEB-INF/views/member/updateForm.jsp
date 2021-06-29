@@ -21,7 +21,7 @@
 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
 		<%@ include file = "../nav.jsp" %>
 		
-	    <div id="headerwrap" id="home" name="home">
+	    <div id="main_text">
 			<form method="post"   action="${contextPath}/member/updateMember.do">
 			<h1  class="text_center">회원정보 수정</h1>
 			<table  align="center">

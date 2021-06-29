@@ -13,7 +13,7 @@
 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
 		<%@ include file = "../nav.jsp" %>
 		
-	    <div id="headerwrap" id="home" name="home">
+	    <div id="main_text">
 			<div id="wrap">
 				<!-- Header -->
 				<div id="chatHeader">

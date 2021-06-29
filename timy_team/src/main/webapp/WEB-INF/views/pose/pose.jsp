@@ -19,7 +19,7 @@
 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
 		<%@ include file = "../nav.jsp" %>
 		
-	    <div id="headerwrap" id="home" name="home">
+	    <div id="main_text">
 			<div>Teachable Machine Pose Model</div>
 			<button type="button" onclick="init()">Start</button>
 			<div><canvas id="canvas"></canvas></div>

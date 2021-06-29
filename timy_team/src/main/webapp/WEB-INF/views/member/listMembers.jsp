@@ -15,52 +15,50 @@
  	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
 		<%@ include file = "../nav.jsp" %>
 		
-	    <div id="headerwrap" id="home" name="home">
+	    <div id="main_text">
 		     <!-- 관리자 사용자 정보 조회 -->
-		    <div id="timy_user">
-		    	<h2> 사용자 정보 관리 </h2>
-		    	<table border="1">
-		    		<thead>
-						<tr bgcolor="spacegray">
-							<th><b>TimyNo.</b></th>
-							<th><b>이름</b></th>
-							<th><b>출생년도</b></th>
-							<th><b>성별</b></th>
-							<th><b>주소</b></th>
-							<th><b>지병</b></th>
-							<th><b>연락처1</b></th>
-							<th><b>연락처2</b></th>
-							<th><b>경고여부</b></th>
-							<th><b>삭제</b></th>
+	    	<h1> 사용자 정보 관리 </h1>
+	    	<table>
+	    		<thead>
+					<tr>
+						<th><b>TimyNo.</b></th>
+						<th><b>이름</b></th>
+						<th><b>출생년도</b></th>
+						<th><b>성별</b></th>
+						<th><b>주소</b></th>
+						<th><b>지병</b></th>
+						<th><b>연락처1</b></th>
+						<th><b>연락처2</b></th>
+						<th><b>경고여부</b></th>
+						<th><b>삭제</b></th>
+					</tr>
+				</thead>
+			   
+			   <tbody>
+					<c:forEach var="member" items="${membersList}" >     
+						<tr>
+						   	<td>
+						     	<a href="${contextPath}/member/searchMember.do?timySerialNo=${member.timySerialNo}">${member.timySerialNo}</a>
+							</td>
+							<td>${member.username}</td>
+							<td>${member.yearofbirth}</td>
+							<td>${member.gender}</td>
+							<td>${member.addr}</td>
+							<td>${member.illness}</td>
+							<td>${member.mobile1}</td>
+							<td>${member.mobile2}</td>
+							<td>${member.emerg}</td>
+							<td><a href="${contextPath}/member/removeMember.do?timySerialNo=${member.timySerialNo }">삭제하기</a></td>
 						</tr>
-					</thead>
-				   
-				   <tbody>
-						<c:forEach var="member" items="${membersList}" >     
-							<tr>
-							   	<td>
-							     	<a href="${contextPath}/member/searchMember.do?timySerialNo=${member.timySerialNo}">${member.timySerialNo}</a>
-								</td>
-								<td>${member.username}</td>
-								<td>${member.yearofbirth}</td>
-								<td>${member.gender}</td>
-								<td>${member.addr}</td>
-								<td>${member.illness}</td>
-								<td>${member.mobile1}</td>
-								<td>${member.mobile2}</td>
-								<td>${member.emerg}</td>
-								<td><a href="${contextPath}/member/removeMember.do?timySerialNo=${member.timySerialNo }">삭제하기</a></td>
-							</tr>
-						</c:forEach>   
-					</tbody>
-				</table>
-				<a  href="${contextPath}/member/memberForm.do"><h2 style="text-align:center">회원가입</h2></a>
-		    
-		
-				<a  href="${contextPath}/member/warning.do">실시간 감지 페이지로 이동</h1></a>
-				<br><br>
-				<a href="../">index 페이지로 이동</a>
-		    </div><!--  timy_user	-->
-		</div><!--  id="headerwrap" id="home" name="home"	 -->
+					</c:forEach>   
+				</tbody>
+			</table>
+			<a  href="${contextPath}/member/memberForm.do"><h1>회원가입</h1></a>
+	    
+	
+			<a  href="${contextPath}/member/warning.do">실시간 감지 페이지로 이동</a>
+			<br><br>
+			<a href="../">index 페이지로 이동</a>
+		</div><!--  div main_text	 -->
 	</body>
 </html>
