@@ -4,7 +4,6 @@
 
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
-	alert('js 연결확인1');
     // 사용 중인 모델에 대한 링크(Teachable Machine 내보내기 패널)
     const URL = "../resources/my_model/";
     let model, webcam, ctx, labelContainer, maxPredictions;
@@ -59,16 +58,12 @@
 				//var audio = new Audio('emerg.mp3');
 				//audio.play();
 				
-				
 				//왼손을 들면 구조요청
 				alert('응급 구조 요청')
-				
-				
-				
+				this.document.getElementById("test").submit();
 				}
 			status = "emergency";
 		}
-
 
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =

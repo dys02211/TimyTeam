@@ -18,26 +18,17 @@
 </head>
 <body>
 
-
-<div>Teachable Machine Pose Model</div>
+<div>모션인식</div>
 <button type="button" onclick="init()">Start</button>
 <div><canvas id="canvas"></canvas></div>
 <div id="label-container"></div>
-
 
 	    	<table border="1">
 	    		<thead>
 					<tr bgcolor="spacegray">
 						<th><b>TimyNo.</b></th>
 						<th><b>이름</b></th>
-						<th><b>출생년도</b></th>
-						<th><b>성별</b></th>
-						<th><b>주소</b></th>
-						<th><b>지병</b></th>
-						<th><b>연락처1</b></th>
-						<th><b>연락처2</b></th>
 						<th><b>경고여부</b></th>
-						<th><b>삭제</b></th>
 					</tr>
 				</thead>
 			   
@@ -46,31 +37,17 @@
 						<tr>
 						   	<td>${member.timySerialNo}</td>
 							<td>${member.username}</td>
-							<td>${member.yearofbirth}</td>
-							<td>${member.gender}</td>
-							<td>${member.addr}</td>
-							<td>${member.illness}</td>
-							<td>${member.mobile1}</td>
-							<td>${member.mobile2}</td>
 							<td>${member.emerg}</td>
-							<td>${member.timySerialNo }</td>
 						</tr>
 					</c:forEach>   
 				</tbody>
 			</table>
-			
-			
-			
-			
-			
+
 		<form method="post" action="${contextPath}/member/updateMember2.do" id="test">
 			티미시리얼번호:<input type="text" name="timySerialNo" value="1"/><br/>
 			DB emerg 경고들어갈 메시지 : <input type="text" name="emerg" value="1"/>
 			<input type="submit" value="수정하기">
 		</form>
 		
-	
-		
-
 </body>
 </html>
