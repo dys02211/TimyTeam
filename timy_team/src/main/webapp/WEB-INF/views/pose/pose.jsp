@@ -23,23 +23,40 @@
 <div><canvas id="canvas"></canvas></div>
 <div id="label-container"></div>
 
-		<table border="1"  align="center"  width="80%">
-		 <tr align="center"   bgcolor="lightgreen">
-			<td ><b>티미</b></td>
-			<td><b>일자</b></td>
-			<td><b>경고해결여부</b></td>
-		</tr>
-		
-		<%-- <jsp:include page="${contextPath}/user/warningData.do" flush="false"/> --%>
-		<c:forEach var="warning" items="${warningList}" >     
-		<tr align="center">
-			<td>${warning.timySerialNo}</td>
-			<td>${warning.warningDate}</td>
-			<td>${warning.solYN}</td>		
-		</tr>
-		</c:forEach>
-		</table>
-		
-		
+
+	    	<table border="1">
+	    		<thead>
+					<tr bgcolor="spacegray">
+						<th><b>TimyNo.</b></th>
+						<th><b>이름</b></th>
+						<th><b>출생년도</b></th>
+						<th><b>성별</b></th>
+						<th><b>주소</b></th>
+						<th><b>지병</b></th>
+						<th><b>연락처1</b></th>
+						<th><b>연락처2</b></th>
+						<th><b>경고여부</b></th>
+						<th><b>삭제</b></th>
+					</tr>
+				</thead>
+			   
+			   <tbody>
+					<c:forEach var="member" items="${membersList}" >     
+						<tr>
+						   	<td>${member.timySerialNo}</td>
+							<td>${member.username}</td>
+							<td>${member.yearofbirth}</td>
+							<td>${member.gender}</td>
+							<td>${member.addr}</td>
+							<td>${member.illness}</td>
+							<td>${member.mobile1}</td>
+							<td>${member.mobile2}</td>
+							<td>${member.emerg}</td>
+							<td>${member.timySerialNo }</td>
+						</tr>
+					</c:forEach>   
+				</tbody>
+			</table>
+				
 </body>
 </html>

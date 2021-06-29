@@ -27,6 +27,19 @@ public class MemberControllerImpl   implements MemberController {
 	@Autowired
 	private warningService warningService;
 	
+	
+	
+	@Override
+	@RequestMapping(value="/pose/pose.do" ,method = RequestMethod.GET)
+	public ModelAndView pose(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String viewName = getViewName(request);
+		List membersList = memberService.listMembers();
+		ModelAndView mav = new ModelAndView(viewName);
+		mav.addObject("membersList", membersList);
+		//System.out.println(viewName);
+		return mav;
+	}
+		
 	@Override
 	@RequestMapping(value="/member/listMembers.do" ,method = RequestMethod.GET)
 	public ModelAndView listMembers(HttpServletRequest request, HttpServletResponse response) throws Exception {

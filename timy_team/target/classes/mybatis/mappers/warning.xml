@@ -7,7 +7,9 @@
 	<resultMap id="warningResult" type="warningVO">
 		<result property="timySerialNo" column="timySerialNo" />
 		<result property="warningDate" column="warningDate" />
+		<result property="solDate" column="solDate" />
         <result property="solYN" column="solYN" />
+        <result property="bigo" column="bigo" />
 	</resultMap> 
 	
 	<!-- select all warning -->
