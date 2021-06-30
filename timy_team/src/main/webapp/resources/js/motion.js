@@ -1,7 +1,6 @@
 /**
  * 
  */
-
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
     // 사용 중인 모델에 대한 링크(Teachable Machine 내보내기 패널)
@@ -32,9 +31,9 @@
         ctx = canvas.getContext("2d");
         labelContainer = document.getElementById("label-container");
         for (let i = 0; i < maxPredictions; i++) { // and class labels
-            labelContainer.appendChild(document.createElement("div"));
-        }
-    }
+            labelContainer.appendChild(document.createElement("div"));		
+		}
+}
 
     async function loop(timestamp) {
         webcam.update(); 

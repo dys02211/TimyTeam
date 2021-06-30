@@ -16,12 +16,12 @@
 		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
 		<script src="../resources/js/motion.js"></script>
 	</head>
-	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+	<body data-spy="scroll" data-offset="0" data-target="#navbar-main" onload="init()" >
 		<%@ include file = "../nav.jsp" %>
 		
 	    <div id="headerwrap" id="home" name="home">
 			<div>Teachable Machine Pose Model</div>
-			<button type="button" onclick="init()">Start</button>
+			<button type="button" onclick="init()" id="test2">Start</button>
 			<div><canvas id="canvas"></canvas></div>
 			<div id="label-container"></div>
 			
