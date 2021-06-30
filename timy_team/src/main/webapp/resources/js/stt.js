@@ -32,7 +32,7 @@ var cnt = 0;
 				if ( ( ((data.text).indexOf('구해')!=-1) || ((data.text).indexOf('살려')!=-1) || ((data.text).indexOf('도와')!=-1) ) ){
 					if (cnt < 1){
 						callAjaxTTS('도움이 필요하신가요?');
-						alert('위험'+myAlarm.play());
+						myAlarm.play();
 						//녹음시작
 						/*$('#record').click();
 						//10초후 녹음 종료
@@ -73,7 +73,7 @@ var cnt = 0;
 			data:{message:result},
 			success:function(result){				
 				$('audio').prop("src", '/ai/' + result)[0].play();
-				setTimeout(function() {	$("#userinfoForm").submit(); }, 10000);
+				setTimeout(function() {	$("#userinfoForm").submit(); }, 3000);
 
 			},
 			error:function(e){
