@@ -18,7 +18,7 @@
         maxPredictions = model.getTotalClasses();
 
         // 웹캠 설정 편의 기능
-        const size = 200;
+        const size = 700;
         const flip = true; // 웹캠을 플립할지 여부
         webcam = new tmPose.Webcam(size, size, flip); // 너비, 높이, 플립
         await webcam.setup(); // 웹캠 접속을 요청하다
@@ -42,7 +42,6 @@
     }
 
    var status = "neutral";
-	
     async function predict() {
         // 예측 #1: posenet을 통해 입력 실행
         // 이미지, 비디오 또는 캔버스 html 요소를 포함할 수 있는 추정 Pose
@@ -54,11 +53,8 @@
 			status = "neutral";
 		} else if(prediction[1].probability.toFixed(2) == 1.00){
 			if(status == "neutral"){
-				//var audio = new Audio('emerg.mp3');
-				//audio.play();
 				
-				//왼손을 들면 구조요청
-				alert('응급 구조 요청')
+				//왼손을 들면 구조요청			
 				this.document.getElementById("test").submit();
 				}
 			status = "emergency";
