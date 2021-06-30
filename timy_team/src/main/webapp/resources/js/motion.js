@@ -1,12 +1,20 @@
 /**
  * 
  */
+	
+/*	alert("test22");
+	
+		var audio = new Audio("../resources/audio/asdasd.wav");
+		audio.play();
+	*/
+
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
     // 사용 중인 모델에 대한 링크(Teachable Machine 내보내기 패널)
     const URL = "../resources/my_model/";
     let model, webcam, ctx, labelContainer, maxPredictions;
- 
+	
+
     async function init() {
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
@@ -18,18 +26,19 @@
         maxPredictions = model.getTotalClasses();
 
         // 웹캠 설정 편의 기능
-        const size = 700;
+        const size = 200;
         const flip = true; // 웹캠을 플립할지 여부
         webcam = new tmPose.Webcam(size, size, flip); // 너비, 높이, 플립
         await webcam.setup(); // 웹캠 접속을 요청하다
         await webcam.play();
         window.requestAnimationFrame(loop);
-
+		
         // DOM에 요소를 추가/가져오기
         const canvas = document.getElementById("canvas");
         canvas.width = size; canvas.height = size;
         ctx = canvas.getContext("2d");
-        labelContainer = document.getElementById("label-container");
+ 
+       labelContainer = document.getElementById("label-container");
         for (let i = 0; i < maxPredictions; i++) { // and class labels
             labelContainer.appendChild(document.createElement("div"));		
 		}
@@ -37,11 +46,13 @@
 
     async function loop(timestamp) {
         webcam.update(); 
+		/*await delay(2);*/
         await predict();
+		/*await delay(1);*/
         window.requestAnimationFrame(loop);
     }
 
-   var status = "neutral";
+   var status = "right";
     async function predict() {
         // 예측 #1: posenet을 통해 입력 실행
         // 이미지, 비디오 또는 캔버스 html 요소를 포함할 수 있는 추정 Pose
@@ -50,16 +61,18 @@
         const prediction = await model.predict(posenetOutput);
         
         if(prediction[0].probability.toFixed(2) == 1.00){
-			status = "neutral";
+			status = "stand";
 		} else if(prediction[1].probability.toFixed(2) == 1.00){
-			if(status == "neutral"){
-				
+			if(status == "right"){
 				//왼손을 들면 구조요청			
 				this.document.getElementById("test").submit();
 				}
-			status = "emergency";
+			status = "left";
+		} else if(prediction[2].probability.toFixed(2) == 1.00){
+			console.log('도움이 필요하시면 왼손을 들어주세요');
+			status = "right";
 		}
-
+		
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
