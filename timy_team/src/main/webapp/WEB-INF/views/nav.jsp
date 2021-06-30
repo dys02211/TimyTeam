@@ -24,7 +24,7 @@
 		        <div class="navbar-collapse collapse">
 		          	<ul class="nav navbar-nav">
 			            <li> <a href="${contextPath}" class="smoothScroll">Home</a></li>
-						<li> <a href="${contextPath}/about.jsp" class="smoothScroll">About</a></li>
+						<li> <a href="${contextPath}/#about" class="smoothScroll">About</a></li>
 						<li> <a href="${contextPath}/member/listMembers.do" class="smoothScroll">관리자</a></li>					
 						<li> <a href="${contextPath}/member/warning.do" class="smoothScroll">모니터링</a></li>
 						<li> <a href="${contextPath}/user/user_main.do" class="smoothScroll">사용자</a></li>

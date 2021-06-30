@@ -21,56 +21,59 @@ body {
 	timy 추가
 	2021 팬톤 RGB : ULTIMATE GRAY(147,149,151, HEX:939597) / ILLUMINATING(245,223,77, HEX:F5DF4D)
 */
+#about{
+    width: 100vw; height: 100vh;
+}
 #main_text {
     margin-top: 0px;
     padding-top: 120px;
     text-align: center;
-    background-attachment: relative;
-    background-position: center center;
     min-height: 650px;
-    width: 100%;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
-
-#main_text table{
-	/* border:1px solid gray;  */
-	border-collapse: collapse; 
-	border-spacing: 0;
-	margin: 15px 15%;
-}
-#main_text table thead{
-	background-color:#d0d0d0;
-}
-#main_text table td,th{
-	border:1px solid gray;
-	padding:3px 20px;
-}
-
 #main_text h1 {
     color: #040404;
     background: transparent;
     margin: 15px 0;
-    padding: 0px 10%;
-    /* font-size: 100px;
-    text-shadow: 2px 2px 2px #000; 
-    font-weight: bold;
-    font-size: 16px;  */
-	 text-align:left;
-	
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+}
+.menual {
+    text-align: left;
+    display: inline-block;
+    line-height:40px;
+    width:50%;
+}
+.menual b {font-size : 13.55pt;}
+.menual form{
+	margin-left: 5%;
+    text-align: center;
 }
 
+.menual table{
+	/* border:1px solid gray;  */
+	border-collapse: collapse; 
+	border-spacing: 0;
+    text-align: center;
+    line-height: 1.5;
+    margin: 20px 10px;
+}
+.menual table thead th{
+    border-bottom: 1px solid #ccc; 
+    padding: 20px;
+    font-weight: bold;
+    vertical-align: top;
+    margin: 20px 10px;
+}
+.menual table td{
+    padding:5px 10px;
+    vertical-align: top;
+}
+.admin_left{
+	text-align : left;
+	font-weight : bold;
+	font-size : 32px;
+}
+.admin_right{
+	text-align : left;
+}
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -169,7 +172,7 @@ body {
 
 .navbar-default {
     border-color: transparent;
-    background-color: rgba(255,255,255,0.0);
+    background-color: rgba(255,255,255,1);
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -413,6 +416,7 @@ a:after {
     background-position: center center;
     min-height: 650px;
     width: 100%;
+    height: 100%;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -424,24 +428,24 @@ a:after {
 }
 
 #headerwrap h1 {
-    color: #ffffff;
+    color: #F5DF4D;
     margin-top: 60px;
     padding-bottom: 30px;
     letter-spacing: 8px;
     font-size: 100px;
     font-weight: bold;
-    text-shadow: 2px 2px 2px #000;
+    text-shadow: 2px 2px 2px #939597;
 }
 
 #headerwrap p {
-    color: #ffffff;
+    color: #939597;
     font-size: 40px;
     font-weight: 400;
     text-align: center;
     line-height: 40px;
     letter-spacing: 3px;
     margin-left: 15px;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 2px 2px 2px #F5DF4D;
 }
 
 .greywrap {
@@ -498,8 +502,8 @@ a:after {
 }
 
 .homebtn {
-    border: 3px solid #fff;
-    color: #fff;
+    border: 3px solid #939597;
+    color: #939597;
     border-radius: 0;
     padding: 15px 20px;
     font-size: 22px;
