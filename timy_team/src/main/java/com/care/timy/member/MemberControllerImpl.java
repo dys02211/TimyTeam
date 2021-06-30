@@ -27,6 +27,19 @@ public class MemberControllerImpl   implements MemberController {
 	@Autowired
 	private warningService warningService;
 	
+	
+	
+	@Override
+	@RequestMapping(value="/pose/pose.do" ,method = RequestMethod.GET)
+	public ModelAndView pose(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String viewName = getViewName(request);
+		List membersList = memberService.listMembers();
+		ModelAndView mav = new ModelAndView(viewName);
+		mav.addObject("membersList", membersList);
+		//System.out.println(viewName);
+		return mav;
+	}
+		
 	@Override
 	@RequestMapping(value="/member/listMembers.do" ,method = RequestMethod.GET)
 	public ModelAndView listMembers(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -52,7 +65,19 @@ public class MemberControllerImpl   implements MemberController {
 		//System.out.println(viewName);
 		return mav;
 	}
-
+	// pose
+	@Override
+	@RequestMapping(value="/member/updateMember2.do" ,method = RequestMethod.POST)
+	public ModelAndView updateMember2(@ModelAttribute("member") MemberVO member,
+			                  HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setCharacterEncoding("utf-8");
+		int result = 0;
+		result = memberService.updateEmergMember(member);
+		ModelAndView mav = new ModelAndView("redirect:/pose/pose.do");
+		return mav;
+	}
+	
+	
 	@Override
 	@RequestMapping(value="/member/addMember.do" ,method = RequestMethod.POST)
 	public ModelAndView addMember(@ModelAttribute("member") MemberVO member,

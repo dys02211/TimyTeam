@@ -4,6 +4,7 @@
 
 
 $('audio').hide();
+//$('#warningForm').hide();
 $('#userinfoForm').hide();
 var cnt = 0;
 
@@ -49,7 +50,7 @@ var cnt = 0;
 						// insert warning TBL 
 						//$("#warningForm").submit();
 						// update userinfo TBL
-						//$("#userinfoForm").submit();						
+						$("#userinfoForm").submit();						
 						cnt = 0;
 					}
 					console.log(cnt);
@@ -72,7 +73,7 @@ var cnt = 0;
 			data:{message:result},
 			success:function(result){				
 				$('audio').prop("src", '/ai/' + result)[0].play();
-				setTimeout(function() {	$("#userinfoForm").submit(); }, 10000);
+				setTimeout(function() {	$("#userinfoForm").submit(); }, 3000);
 			},
 			error:function(e){
 				alert("에러 발생 : " + e);

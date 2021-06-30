@@ -61,4 +61,13 @@ public class MemberDAOImpl implements MemberDAO {
 		int result = sqlSession.insert("mapper.member.updateEmergMember", memberVO);
 		return result;
 	}
+	
+	
+	// pose 
+	@Override
+	public int updateMember2(MemberVO memberVO) throws DataAccessException {
+		// TODO Auto-generated method stub
+		int result = sqlSession.insert("mapper.member.updateMember", memberVO);
+		return result;
+	}
 }

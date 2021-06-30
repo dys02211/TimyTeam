@@ -107,6 +107,16 @@
       ]]>      
    </update> 
    
+      <!-- update pose emerg -->
+   <update id="updateMember2"  parameterType="memberVO">
+     <![CDATA[
+	     update userinfo
+	     set emerg=#{emerg}
+	     where
+	     timySerialNo=#{timySerialNo}
+      ]]>      
+   </update> 
+   
     <!-- removeMember -->
    <delete id="deleteMember"  parameterType="String">
 	<![CDATA[
