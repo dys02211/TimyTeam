@@ -13,11 +13,6 @@
 <head>
 	<meta charset="UTF-8">
 		<title>회원 정보 수정창</title>
-		<style>
-		   .text_center{
-		     text-align:center;
-		   }
-		</style>
 	</head>
 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
 		<%@ include file = "../nav.jsp" %>
