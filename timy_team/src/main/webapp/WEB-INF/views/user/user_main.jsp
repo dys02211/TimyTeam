@@ -20,7 +20,7 @@
 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
 		<%@ include file = "../nav.jsp" %>
 		
-	    <div id="headerwrap" id="home" name="home">
+	    <div id="main_text">
 			<h2>음성 녹음</h2>
 			<button id="record">녹음</button> 
 			<button id="stop">정지</button>

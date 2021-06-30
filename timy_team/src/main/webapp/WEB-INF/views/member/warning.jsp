@@ -52,9 +52,7 @@
 				</c:forEach> 
 			  
 			</table>
-			<form>
-				<input type="button" value="시작" onclick="function autoRefresh_info_div()">  
-			</form>
+
 
 			
 			<a  href="${contextPath}/member/listMembers.do">회원 목록</a>

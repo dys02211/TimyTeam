@@ -22,9 +22,9 @@
  	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
 		<%@ include file = "../nav.jsp" %>
 		
-	    <div id="headerwrap" id="home" name="home">
+	    <div id="main_text">
 			<form method="post"   action="${contextPath}/member/addMember.do">
-			<h2  class="text_center">회원 가입창</h2>
+			<h1  class="text_center">회원 가입창</h1>
 			<table  align="center">
 			   <tr>
 			      <td width="200"><p align="right">TimyNo.</td>

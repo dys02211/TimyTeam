@@ -22,7 +22,7 @@
 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
 		<%@ include file = "../nav.jsp" %>
 		
-	    <div id="headerwrap" id="home" name="home">
+	    <div id="main_text">
 			<form method="post"   action="${contextPath}/member/modMember.do">
 			<h2  class="text_center">회원 정보 수정창</h2>
 			<table  align="center">

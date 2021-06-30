@@ -12,8 +12,8 @@
 	
 	    <!-- Custom styles for this template -->
 	    <link href="./resources/css/style.css" rel="stylesheet">
-	    <link href="./resources/css/elusive-webfont.css" rel="stylesheet" >
 	    <link href="./resources/css/animate.css" rel="stylesheet">
+	    <link href="./resources/css/elusive-webfont.css" rel="stylesheet" >
 	    
 	    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 	    
@@ -54,7 +54,8 @@
 	  		 		<p class="animated slideInLeft">티미 서비스 입니다</p>
 	  		 		<p class="animated slideInRight">환영합니다</p>
 	  		 		<a href="#about" class="btn homebtn smoothScroll">티미사용설명서<i class="el-icon-chevron-down homeicon"></i></a>
-	  		</header>	 
+	  		</header>
+	  		<div ></div> 
 	  		<img src="./resources/images/bg1.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1536px; height: 1023.36px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -186.68px;" />  
 	    </div><!-- /headerwrap -->
 
