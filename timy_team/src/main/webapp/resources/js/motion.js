@@ -2,11 +2,11 @@
  * 
  */
 	
-/*	alert("test22");
+	/*alert("test22");*/
 	
-		var audio = new Audio("../resources/audio/asdasd.wav");
-		audio.play();
-	*/
+		/*var audio = new Audio("../resources/audio/asdasd.wav");
+		audio.play();*/
+	
 
     // More API functions here:
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
