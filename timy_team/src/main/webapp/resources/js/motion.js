@@ -2,10 +2,10 @@
  * 
  */
 	
-	/*alert("test22");*/
+
 	
-		/*var audio = new Audio("../resources/audio/asdasd.wav");
-		audio.play();*/
+		var audio = new Audio("../resources/audio/asdasd.mp3");
+/*		audio.play();*/
 	
 
     // More API functions here:
@@ -52,7 +52,7 @@
         window.requestAnimationFrame(loop);
     }
 
-   var status = "right";
+	var status = "emerg";
     async function predict() {
         // 예측 #1: posenet을 통해 입력 실행
         // 이미지, 비디오 또는 캔버스 html 요소를 포함할 수 있는 추정 Pose
@@ -60,17 +60,31 @@
         // 예측 2: 학습 가능한 기계 분류 모델을 통해 입력 실행
         const prediction = await model.predict(posenetOutput);
         
-        if(prediction[0].probability.toFixed(2) == 1.00){
+/*        if(prediction[0].probability.toFixed(2) == 1.00){
 			status = "stand";
 		} else if(prediction[1].probability.toFixed(2) == 1.00){
-			if(status == "right"){
-				//왼손을 들면 구조요청			
+			if(status == "right"){		
 				this.document.getElementById("test").submit();
 				}
-			status = "left";
+			status = "emerg";
 		} else if(prediction[2].probability.toFixed(2) == 1.00){
-			console.log('도움이 필요하시면 왼손을 들어주세요');
+			audio.play();  
 			status = "right";
+		}*/
+		
+		  if(prediction[0].probability.toFixed(2) == 1.00){
+			status = "stand";
+		} else if(prediction[1].probability.toFixed(2) == 1.00){
+			if((status == "right") || (status == "left")) {		
+				this.document.getElementById("test").submit();
+				}
+			status = "emerg";
+		} else if(prediction[2].probability.toFixed(2) == 1.00){
+			audio.play();  
+			status = "right";
+		} else if(prediction[3].probability.toFixed(2) == 1.00){
+			audio.play();  
+			status = "left";
 		}
 		
         for (let i = 0; i < maxPredictions; i++) {
