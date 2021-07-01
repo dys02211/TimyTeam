@@ -4,7 +4,7 @@
 	
 
 	
-		var audio = new Audio("../resources/audio/asdasd.mp3");
+		var audio = new Audio("../resources/audio/help.mp3");
 /*		audio.play();*/
 	
 
