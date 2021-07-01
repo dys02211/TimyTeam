@@ -26,7 +26,7 @@
         maxPredictions = model.getTotalClasses();
 
         // 웹캠 설정 편의 기능
-        const size = 200;
+        const size = 700;
         const flip = true; // 웹캠을 플립할지 여부
         webcam = new tmPose.Webcam(size, size, flip); // 너비, 높이, 플립
         await webcam.setup(); // 웹캠 접속을 요청하다

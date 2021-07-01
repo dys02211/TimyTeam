@@ -23,7 +23,7 @@
 			<div><canvas id="canvas"></canvas></div>
 			<div id="label-container"></div>
 			
-	    	<table border="1">
+	    	<table border="1" style="display:none">
 		 		<thead>
 					<tr bgcolor="spacegray">
 						<th><b>TimyNo.</b></th>
@@ -57,7 +57,7 @@
 				</tbody>
 			</table>
 			
-			<form method="post" action="${contextPath}/member/updateMember2.do" id="test">
+			<form method="post" action="${contextPath}/member/updateMember2.do" id="test" style="display:none">
 				티미시리얼번호:<input type="text" name="timySerialNo" value="1"/><br/>
 				DB emerg 경고들어갈 메시지 : <input type="text" name="emerg" value="1"/>
 				<input type="submit" value="수정하기">
