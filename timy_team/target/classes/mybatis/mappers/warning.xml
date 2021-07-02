@@ -53,7 +53,7 @@
 	     set bigo=#{bigo}
 	     where
 	     timySerialNo=#{timySerialNo} and warningDate=#{warningDate}
-
+ 
       ]]>      
    </update> 
    
