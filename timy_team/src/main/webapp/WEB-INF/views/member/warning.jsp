@@ -81,7 +81,7 @@
 						<td>${warning.solYN}</td>	
 						<td>${warning.bigo}</td>	
 						<td>
-							     	<a href="${contextPath}/warning/searchWarning.do?timySerialNo=${warning.timySerialNo}">수정</a>
+							     	<a href="${contextPath}/member/updateWarningForm.do">수정</a>
 						</td>	
 					</tr>
 					</c:forEach>   
@@ -90,4 +90,3 @@
 		</div>
 	</body>
 </html>
- 

@@ -58,7 +58,7 @@ public class warningController {
 		return mav;
 	}
 	
-	
+	/*
 	@RequestMapping(value="/warning/searchWarning.do" ,method = RequestMethod.GET)
 	public ModelAndView searchWarning(@RequestParam("timySerialNo") String timySerialNo, 
 			           HttpServletRequest request, HttpServletResponse response) throws Exception{
@@ -68,6 +68,7 @@ public class warningController {
 		mav.addObject("warning",vo);
 		return mav;
 	}
+	*/
 	
 	@RequestMapping(value="/member/updateWarningBigo.do" ,method = RequestMethod.POST)
 	public ModelAndView updateMember(@ModelAttribute("warning") warningVO warning,
