@@ -111,6 +111,17 @@ public class MemberControllerImpl   implements MemberController {
 		ModelAndView mav = new ModelAndView("redirect:/user/user_main.do");
 		return mav;
 	}
+
+	@Override
+	@RequestMapping(value="/chatbot/updateChatEmergMember" ,method = RequestMethod.POST)
+	//@RequestParam("message") String message
+	public int updateChatEmergMember(@ModelAttribute("member") MemberVO member ) throws Exception {
+		//request.setCharacterEncoding("utf-8");
+		int result = 0;
+		result = memberService.updateEmergMember(member);
+		//ModelAndView mav = new ModelAndView("redirect:/user/user_main.do");
+		return result;
+	}
 	
 	@Override
 	@RequestMapping(value="/member/removeMember.do" ,method = RequestMethod.GET)

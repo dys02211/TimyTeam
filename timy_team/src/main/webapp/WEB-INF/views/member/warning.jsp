@@ -13,7 +13,7 @@
 	<head>
 		<meta charset=UTF-8">
 		<title>응급회원 목록</title>
-		<META HTTP-EQUIV="refresh" CONTENT="3"><!-- 새로고침 -->	
+		<META HTTP-EQUIV="refresh" CONTENT="10"><!-- 새로고침 -->	
 		<script>
 			const member = ${fn:length(membersListEmerg)};
 			console.log(member);
@@ -68,14 +68,18 @@
 					<tr>
 						<td ><b>티미</b></td>
 						<td><b>일자</b></td>
+						<td><b>해결 일자</b></td>
 						<td><b>경고해결여부</b></td>
+						<td><b>비고</b></td>
 					</tr>
 					 
 					<c:forEach var="warning" items="${warningList}" >     
 					<tr align="center">
 						<td>${warning.timySerialNo}</td>
 						<td>${warning.warningDate}</td>
-						<td>${warning.solYN}</td>		
+						<td>${warning.solDate}</td>	
+						<td>${warning.solYN}</td>	
+						<td>${warning.bigo}</td>		
 					</tr>
 					</c:forEach>   
 				</table>	

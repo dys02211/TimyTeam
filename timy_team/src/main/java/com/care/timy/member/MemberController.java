@@ -17,6 +17,7 @@ public interface MemberController {
 	public ModelAndView searchMember(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) throws Exception;
 	public ModelAndView warning(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	public ModelAndView updateEmergMember(@ModelAttribute("member") MemberVO member, HttpServletRequest request, HttpServletResponse response) throws Exception;
+	public int updateChatEmergMember(@ModelAttribute("member") MemberVO member) throws Exception;
 	ModelAndView pose(HttpServletRequest request, HttpServletResponse response) throws Exception;
 	
 	// pose
