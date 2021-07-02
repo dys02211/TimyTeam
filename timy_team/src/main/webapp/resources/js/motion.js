@@ -3,8 +3,9 @@
  */
 	
 
-	
+	alert('teset2');
 		var audio = new Audio("../resources/audio/help.mp3");
+		var audio2 = new Audio("../resources/audio/emerg.mp3");
 /*		audio.play();*/
 	
 
@@ -59,23 +60,13 @@
         const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
         // 예측 2: 학습 가능한 기계 분류 모델을 통해 입력 실행
         const prediction = await model.predict(posenetOutput);
-        
-/*        if(prediction[0].probability.toFixed(2) == 1.00){
-			status = "stand";
-		} else if(prediction[1].probability.toFixed(2) == 1.00){
-			if(status == "right"){		
-				this.document.getElementById("test").submit();
-				}
-			status = "emerg";
-		} else if(prediction[2].probability.toFixed(2) == 1.00){
-			audio.play();  
-			status = "right";
-		}*/
-		
+
 		  if(prediction[0].probability.toFixed(2) == 1.00){
 			status = "stand";
 		} else if(prediction[1].probability.toFixed(2) == 1.00){
-			if((status == "right") || (status == "left")) {		
+			 
+			if((status == "right") || (status == "left")) {
+				audio2.play(); 		
 				this.document.getElementById("test").submit();
 				}
 			status = "emerg";
