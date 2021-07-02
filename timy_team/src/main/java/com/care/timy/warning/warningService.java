@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.care.timy.member.MemberVO;
+
 
 @Service("warningService")
 @Transactional(propagation = Propagation.REQUIRED)
@@ -30,6 +32,16 @@ public class warningService {
 	/* warning TBL update */
 	public int updateWarning(warningVO warning) throws DataAccessException {
 		return warningDAO.updateWarning(warning);
+	}
+	
+	/* search warning TBL */
+	public warningVO searchWarning(String timySerialNo) throws DataAccessException {
+		return warningDAO.searchWarning(timySerialNo);
+	}
+	
+	/* warning bigo update */
+	public int updateWarningBigo(warningVO warning) throws DataAccessException {
+		return warningDAO.updateWarningBigo(warning);
 	}
 
 }

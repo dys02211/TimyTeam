@@ -10,7 +10,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.care.timy.member.MemberVO;
 
 
 @Controller("warningController")
@@ -35,7 +38,7 @@ public class warningController {
 	public ModelAndView addWarning(@ModelAttribute("warning") warningVO warning,
 			                  HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("utf-8");
-		System.out.println("addWorning");
+		System.out.println("addWarning");
 		int result = 0;
 		result = warningService.addWarning(warning);
 		System.out.println("warning insert : " + result);
@@ -52,6 +55,27 @@ public class warningController {
 		int result = 0;
 		result = warningService.updateWarning(warning);
 		ModelAndView mav = new ModelAndView("redirect:/user/user_main.do");
+		return mav;
+	}
+	
+	
+	@RequestMapping(value="/warning/searchWarning.do" ,method = RequestMethod.GET)
+	public ModelAndView searchWarning(@RequestParam("timySerialNo") String timySerialNo, 
+			           HttpServletRequest request, HttpServletResponse response) throws Exception{
+		request.setCharacterEncoding("utf-8");
+		warningVO vo = warningService.searchWarning(timySerialNo);
+		ModelAndView mav = new ModelAndView("forward:/member/updateWarningForm.do");
+		mav.addObject("warning",vo);
+		return mav;
+	}
+	
+	@RequestMapping(value="/member/updateWarningBigo.do" ,method = RequestMethod.POST)
+	public ModelAndView updateMember(@ModelAttribute("warning") warningVO warning,
+			                  HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setCharacterEncoding("utf-8");
+		int result = 0;
+		result = warningService.updateWarningBigo(warning);
+		ModelAndView mav = new ModelAndView("redirect:/member/warning.do");
 		return mav;
 	}
 	

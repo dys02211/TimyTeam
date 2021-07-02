@@ -19,6 +19,15 @@
       ]]>
 	</select>
 	
+		  <!-- searchMember관련 -->
+	<select id="selectWarningById" resultType="warningVO"  parameterType="String" >
+      <![CDATA[
+         select * from warning
+         where
+         timySerialNo=#{timySerialNo}			
+      ]]>
+	 </select>	
+	
 	<!-- insert warning -->
 	<insert id="insertWarning"  parameterType="warningVO">
 		<![CDATA[
@@ -34,6 +43,17 @@
 	     set solYN=#{solYN}
 	     where
 	     timySerialNo=#{timySerialNo} and warningDate=#{warningDate}
+      ]]>      
+   </update> 
+   
+    <!-- update warning bigo -->
+      <update id="updateWarningBigo"  parameterType="warningVO">
+     <![CDATA[
+	     update warning
+	     set bigo=#{bigo}
+	     where
+	     timySerialNo=#{timySerialNo} and warningDate=#{warningDate}
+
       ]]>      
    </update> 
    

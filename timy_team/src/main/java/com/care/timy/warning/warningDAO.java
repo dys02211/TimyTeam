@@ -8,6 +8,8 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
 
+
+
 @Repository("warningDAO")
 public class warningDAO {
 	@Autowired
@@ -29,6 +31,18 @@ public class warningDAO {
 	/* warning TBL update */
 	public int updateWarning(warningVO warningVO) throws DataAccessException {
 		int result = sqlSession.insert("mapper.warning.updateWarning", warningVO);
+		return result;
+	}
+	
+	/* search warning TBL */
+	public warningVO searchWarning(String timySerialNo) throws DataAccessException {
+		warningVO vo = (warningVO) sqlSession.selectOne("mapper.warning.selectWarningById", timySerialNo);
+		return vo;
+	}
+	
+	/* warning bigo update */
+	public int updateWarningBigo(warningVO warningVO) throws DataAccessException {
+		int result = sqlSession.insert("mapper.warning.updateWarningBigo", warningVO);
 		return result;
 	}
 

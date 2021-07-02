@@ -79,7 +79,10 @@
 						<td>${warning.warningDate}</td>
 						<td>${warning.solDate}</td>	
 						<td>${warning.solYN}</td>	
-						<td>${warning.bigo}</td>		
+						<td>${warning.bigo}</td>	
+						<td>
+							     	<a href="${contextPath}/warning/searchWarning.do?timySerialNo=${warning.timySerialNo}">수정</a>
+						</td>	
 					</tr>
 					</c:forEach>   
 				</table>	
