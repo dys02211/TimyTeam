@@ -63,7 +63,7 @@
 
 		  if(prediction[0].probability.toFixed(2) == 1.00){
 			status = "stand";
-		} else if(prediction[1].probability.toFixed(2) == 1.00){
+		} else if(prediction[1].probability.toFixed(2) > 0.90){
 			 
 			if((status == "right") || (status == "left")) {
 				audio2.play(); 		
