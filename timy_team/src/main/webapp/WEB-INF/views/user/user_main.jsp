@@ -70,7 +70,7 @@
 				</c:forEach>
 			</table>		
 			
-			<!-- 숨김, 화면에 안보임 -->
+			<!-- 숨김, 화면에  안보임 -->
 			<!-- userinfo TBL 위험값으로 변경 -->		
 			<form id="userinfoForm" method="post" action="${contextPath}/member/updateWarningMember.do" style="display:none">
 				티미시리얼번호:<input type="text" id="utimyid" name="timySerialNo" value="1"/><br/>

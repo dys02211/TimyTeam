@@ -52,7 +52,7 @@
 		/*await delay(1);*/
         window.requestAnimationFrame(loop);
     }
-
+ 
 	var status = "emerg";
     async function predict() {
         // 예측 #1: posenet을 통해 입력 실행
