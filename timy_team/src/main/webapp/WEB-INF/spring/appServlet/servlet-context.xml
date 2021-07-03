@@ -17,10 +17,6 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping="/ai/**" location="c:\\ai\\" />
 	
-	
-	<!-- <beans:bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
-	<beans:bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" /> -->
-	
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />

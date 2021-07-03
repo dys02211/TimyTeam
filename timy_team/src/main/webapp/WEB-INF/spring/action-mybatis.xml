@@ -10,10 +10,7 @@
 	<value>/WEB-INF/config/jdbc.properties</value>
 	</property>
 	</bean>
-	
-	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
-	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
-	
+			
  	<bean id="dataSource"
 		class="org.apache.ibatis.datasource.pooled.PooledDataSource">
 		<property name="driver" value="${jdbc.driverClassName}" />
