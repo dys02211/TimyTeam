@@ -66,9 +66,9 @@
 				
 				<table>
 					<tr>
-						<td ><b>티미</b></td>
-						<td><b>일자</b></td>
-						<td><b>해결 일자</b></td>
+						<td ><b>TimyNo.</b></td>
+						<td><b>발생일</b></td>
+						<td><b>해결일</b></td>
 						<td><b>경고해결여부</b></td>
 						<td><b>비고</b></td>
 					</tr>
