@@ -77,9 +77,9 @@ window.onload = function(){
 	///////////////////////////////////////////////////
 	
 	function callAjaxTTS(result){
-		console.log(result);
+		//console.log(result);
 		if( result == "도움을 요청 하겠습니다"){
-			console.log('call 도움 요청 할거임');
+			//console.log('call 도움 요청 할거임');
 			callWarningDB();
 		}
 		$.ajax({
@@ -100,16 +100,15 @@ window.onload = function(){
 	}// callAjaxTTS///////////////////////////////////////////////////
 	
 	function callWarningDB(){
-		var queryString = $("form[name=userinfoForm]").serialize() ;
-		console.log(queryString);
+		//console.log($('#userinfoForm').serialize());
+		
 		$.ajax({
 			type:"post",
 			url:"updateChatEmergMember",
-			//data: {member : queryString},
-			data: {"timySerialNo" : "1", "emerg" : "1"},
-			//dataType : 'json',
+			data : $('#userinfoForm').serialize(),
+			contentType: "application/x-www-form-urlencoded; charset=UTF-8;",
 			success:function(result){		
-				console.log("dbupdate완료 : " + result);
+				//console.log("dbupdate완료 : " + result);
 			},
 			error:function(e){
 				alert("에러 발생 : " + e);
@@ -117,5 +116,6 @@ window.onload = function(){
 		});
 		
 	}// callWarningDB
+	
 	
 }

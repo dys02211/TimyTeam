@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.care.timy.warning.warningService;
+import com.care.timy.warning.warningVO;
 
 
 
@@ -114,13 +116,25 @@ public class MemberControllerImpl   implements MemberController {
 
 	@Override
 	@RequestMapping(value="/chatbot/updateChatEmergMember" ,method = RequestMethod.POST)
+	@ResponseBody
 	//@RequestParam("message") String message
-	public int updateChatEmergMember(@ModelAttribute("member") MemberVO member ) throws Exception {
+	public int updateChatEmergMember(@ModelAttribute("member") MemberVO member,
+            HttpServletRequest request, HttpServletResponse response) throws Exception {
 		//request.setCharacterEncoding("utf-8");
 		int result = 0;
 		result = memberService.updateEmergMember(member);
 		//ModelAndView mav = new ModelAndView("redirect:/user/user_main.do");
 		return result;
+	}
+	
+	@RequestMapping(value="/member/searchWarning.do" ,method = RequestMethod.GET)
+	public ModelAndView searchWarning(@RequestParam("timySerialNo") String timySerialNo, 
+			           HttpServletRequest request, HttpServletResponse response) throws Exception{
+		request.setCharacterEncoding("utf-8");
+		warningVO vo = warningService.searchWarning(timySerialNo);
+		ModelAndView mav = new ModelAndView("forward:/member/updateWarningForm.do");
+		mav.addObject("warning",vo);
+		return mav;
 	}
 	
 	@Override
