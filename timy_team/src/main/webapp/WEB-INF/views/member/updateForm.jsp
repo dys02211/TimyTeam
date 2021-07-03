@@ -14,7 +14,7 @@
 		<title>티미 정보 수정</title>
 	</head>
 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-		<%@ include file = "../nav.jsp" %>
+		<%@ include file = "../navadmin.jsp" %>
 		
 	    <div id="main_text">
 		    <div class="menual">

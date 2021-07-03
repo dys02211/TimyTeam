@@ -13,7 +13,7 @@
 		<title>티미 관리</title>
 	</head>
  	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-		<%@ include file = "../nav.jsp" %>
+		<%@ include file = "../navadmin.jsp" %>
 		
 	    <div id="main_text">
 		     <!-- 관리자 사용자 정보 조회 -->

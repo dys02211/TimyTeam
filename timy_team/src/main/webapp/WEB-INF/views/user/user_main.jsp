@@ -18,7 +18,7 @@
 		<script src="<c:url value='../resources/js/voiceRecord.js'/>"></script>
 	</head>
 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-		<%@ include file = "../nav.jsp" %>
+		<%@ include file = "../navuser.jsp" %>
 		<!-- <div id="test">
 			<script>
 				const recognition = new SpeechRecognition();

@@ -17,7 +17,7 @@
 		<script src="<c:url value='../resources/js/motion.js'/>"></script>
 	</head>
 	
-	<body data-spy="scroll" data-offset="0" data-target="#navbar-main" onload="init()" > <%@ include file = "../nav.jsp" %>
+	<body data-spy="scroll" data-offset="0" data-target="#navbar-main" onload="init()" > <%@ include file = "../navuser.jsp" %>
 	    <div id="main_text">
 			<button type="button" onclick="init()" style="display:none">Start</button>
 			<div><canvas id="canvas"></canvas></div>

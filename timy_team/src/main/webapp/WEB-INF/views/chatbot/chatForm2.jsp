@@ -14,7 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="../resources/css/chatbot.css">
 	</head>
 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-		<%@ include file = "../nav.jsp" %>
+		<%@ include file = "../navuser.jsp" %>
 		
 	    <div id="main_text">
 			<div id="wrap">

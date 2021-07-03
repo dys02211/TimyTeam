@@ -11,7 +11,7 @@
 <link href="../resources/css/animate.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 	    
-<div id="navbar-main">
+<div id="navbar-main-admin">
 	      <!-- Fixed navbar -->
 		    <div class="navbar navbar-default navbar-fixed-top">
 		      <div class="container">
@@ -23,10 +23,10 @@
 		        </div>
 		        <div class="navbar-collapse collapse">
 		          	<ul class="nav navbar-nav">
-
-						<li> <a href="${contextPath}/admin/" class="smoothScroll">관리자</a></li>					
-						<li> <a href="${contextPath}/user/" class="smoothScroll">사용자</a></li>
-
+			            <li> <a href="${contextPath}/admin/" class="smoothScroll">Home</a></li>
+						<li> <a href="${contextPath}/admin/#about" class="smoothScroll">About</a></li>
+						<li> <a href="${contextPath}/member/listMembers.do" class="smoothScroll">관리자</a></li>					
+						<li> <a href="${contextPath}/member/warning.do" class="smoothScroll">구조 요청 모니터링</a></li>
 					</ul>
 		        </div><!--/.nav-collapse -->
 		      </div>

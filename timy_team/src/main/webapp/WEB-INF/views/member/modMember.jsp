@@ -15,7 +15,7 @@
 		<title>회원 정보 수정창</title>
 	</head>
 	<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-		<%@ include file = "../nav.jsp" %>
+		<%@ include file = "../navadmin.jsp" %>
 		
 	    <div id="main_text">
 			<form method="post"   action="${contextPath}/member/modMember.do">

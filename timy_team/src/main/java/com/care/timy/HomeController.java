@@ -43,6 +43,21 @@ public class HomeController {
 		return "index";
 	}
 	
+	
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public String indexadmin(Locale locale, Model model) {
+		
+		
+		return "indexadmin";
+	}
+	
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
+	public String indexuser(Locale locale, Model model) {
+		
+		
+		return "indexuser";
+	}
+	
 	@RequestMapping(value = "/chatbot/chat2", method = RequestMethod.GET)
 	public String chat2(Locale locale, Model model) {
 		
