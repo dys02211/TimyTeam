@@ -3,7 +3,7 @@
  */
 	
 
-	alert('teset2');
+	alert('카메라의 위치를 설정하세요.');
 		var audio = new Audio("../resources/audio/help.mp3");
 		var audio2 = new Audio("../resources/audio/emerg.mp3");
 /*		audio.play();*/

@@ -58,17 +58,17 @@ public class warningController {
 		return mav;
 	}
 	
-	/*
+	
 	@RequestMapping(value="/warning/searchWarning.do" ,method = RequestMethod.GET)
-	public ModelAndView searchWarning(@RequestParam("timySerialNo") String timySerialNo, 
+	public ModelAndView searchWarning(@RequestParam("warningDate") String warningDate, 
 			           HttpServletRequest request, HttpServletResponse response) throws Exception{
 		request.setCharacterEncoding("utf-8");
-		warningVO vo = warningService.searchWarning(timySerialNo);
+		warningVO vo = warningService.searchWarning(warningDate);
 		ModelAndView mav = new ModelAndView("forward:/member/updateWarningForm.do");
 		mav.addObject("warning",vo);
 		return mav;
 	}
-	*/
+	
 	
 	@RequestMapping(value="/member/updateWarningBigo.do" ,method = RequestMethod.POST)
 	public ModelAndView updateMember(@ModelAttribute("warning") warningVO warning,

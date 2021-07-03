@@ -35,8 +35,8 @@ public class warningService {
 	}
 	
 	/* search warning TBL */
-	public warningVO searchWarning(String timySerialNo) throws DataAccessException {
-		return warningDAO.searchWarning(timySerialNo);
+	public warningVO searchWarning(String warningDate) throws DataAccessException {
+		return warningDAO.searchWarning(warningDate);
 	}
 	
 	/* warning bigo update */

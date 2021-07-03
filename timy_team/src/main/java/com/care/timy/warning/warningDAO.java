@@ -35,8 +35,8 @@ public class warningDAO {
 	}
 	
 	/* search warning TBL */
-	public warningVO searchWarning(String timySerialNo) throws DataAccessException {
-		warningVO vo = (warningVO) sqlSession.selectOne("mapper.warning.selectWarningById", timySerialNo);
+	public warningVO searchWarning(String warningDate) throws DataAccessException {
+		warningVO vo = (warningVO) sqlSession.selectOne("mapper.warning.selectWarningByWd", warningDate);
 		return vo;
 	}
 	

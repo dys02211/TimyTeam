@@ -20,11 +20,11 @@
 	</select>
 	
 		  <!-- searchMember관련 -->
-	<select id="selectWarningById" resultType="warningVO"  parameterType="String" >
+	<select id="selectWarningByWd" resultType="warningVO"  parameterType="String" >
       <![CDATA[
          select * from warning
          where
-         timySerialNo=#{timySerialNo}			
+         warningDate=#{warningDate}			
       ]]>
 	 </select>	
 	
@@ -51,8 +51,9 @@
      <![CDATA[
 	     update warning
 	     set bigo=#{bigo}
-	     where
-	     timySerialNo=#{timySerialNo} and warningDate=#{warningDate}
+	      where
+         warningDate=#{warningDate}	
+
  
       ]]>      
    </update> 
