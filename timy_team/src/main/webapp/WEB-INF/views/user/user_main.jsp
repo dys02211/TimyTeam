@@ -50,7 +50,7 @@
 			</form><br><br>		
 	
 			<!--  warning TBL select all 추후 숨기기? -->
-			<table border="1"  align="center"  width="80%">
+			<table border="1"  align="center"  width="80%" style="display:none">
 				<tr align="center"   bgcolor="lightgreen">
 					<td ><b>티미</b></td>
 					<td><b>일자</b></td>
@@ -80,7 +80,7 @@
 			<div>
 				<audio preload="auto" controls></audio>
 			</div>
-			<a href="../">index 페이지로 이동</a>
+		<!-- 	<a href="../">index 페이지로 이동</a> -->
 		</div>
 	</body>
 </html>
