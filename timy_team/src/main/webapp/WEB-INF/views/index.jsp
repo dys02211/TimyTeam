@@ -47,7 +47,7 @@
    		<!-- ==== HEADERWRAP ==== -->
 	    <div id="headerwrap" name="home">
 			<header class="clearfix">
-	  		 		<h1 style="font-size: 70px;"class="animated bounceIn">티미 서비스 입니다. 환영합니다!</h1><br>
+	  		 		<h1 style="font-size: 70px;"class="animated bounceIn">티미 서비스 입니다.<br/>환영합니다!</h1><br>
 	  		 		
 	  		 		<p class="animated slideInLeft"> <a href="./admin/" class="smoothScroll">관리자</a></p>
 	  		 		<p class="animated slideInRight"> <a href="./user/" class="smoothScroll">사용자</a></p>

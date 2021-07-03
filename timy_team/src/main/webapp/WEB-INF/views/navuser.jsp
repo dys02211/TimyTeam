@@ -25,7 +25,7 @@
 		          	<ul class="nav navbar-nav">
 			            <li> <a href="${contextPath}/user/" class="smoothScroll">Home</a></li>
 						<li> <a href="${contextPath}/user/#about" class="smoothScroll">About</a></li>
-						<li> <a href="${contextPath}/user/user_main.do" class="smoothScroll">음성 도움 요청</a></li>
+						<%-- <li> <a href="${contextPath}/user/user_main.do" class="smoothScroll">음성 도움 요청</a></li> --%>
 						<li> <a href="${contextPath}/chatbot/chat2" class="smoothScroll">티미와 대화하기</a></li>
 						<li> <a href="${contextPath}/pose/pose.do" class="smoothScroll">모션 도움 요청</a></li>
 					</ul>
