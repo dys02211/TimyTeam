@@ -30,7 +30,10 @@ window.onload = function(){
 					cnt = 1;
 					//console.log('도움이 필요하신가요?');
 					callAjaxTTS('도움이 필요하신가요?');
-				} else if ( (transcript.indexOf('티미') != -1) || (transcript.indexOf('취미') != -1) || (transcript.indexOf('지니') != -1) || (transcript.indexOf('시리') != -1) ){ /* 티미 호출 */
+					$('#chatBox').append('<div class="msgBox send"><span>' +
+											transcript + '</span></div><br>');	
+					$('#chatBox').append('<div class="msgBox receive"><br>챗봇<br><span> 도움이 필요하신가요? </span></div><br><br>');	
+				} else if ( (transcript.indexOf('티미') != -1) || (transcript.indexOf('팀이') != -1) || (transcript.indexOf('취미') != -1) || (transcript.indexOf('지니') != -1) || (transcript.indexOf('시리') != -1) ){ /* 티미 호출 */
 					//console.log('반복 종료, 티미 호출 대화시작');
 					if( timy_con == 0 ){
 						timy_con = 1;
@@ -38,6 +41,10 @@ window.onload = function(){
 				}else if((transcript.indexOf('잘가') != -1) || (transcript.indexOf('바이') != -1)){
 					//console.log('반복 종료, 티미 호출 대화종료');
 					//clearInterval(loopt_stop);
+					callAjaxTTS('나중에 또 봴게요');
+					$('#chatBox').append('<div class="msgBox send"><span>' +
+											transcript + '</span></div><br>');	
+					$('#chatBox').append('<div class="msgBox receive"><br>챗봇<br><span> 나중에 또 봴게요 </span></div><br><br>');	
 					if( timy_con == 1 ){
 						timy_con = 0;
 					}
@@ -48,6 +55,9 @@ window.onload = function(){
 					cnt = 0;
 					//console.log('도움을 요청 하겠습니다.');
 					callAjaxTTS('도움을 요청 하겠습니다');
+					$('#chatBox').append('<div class="msgBox send"><span>' +
+											transcript + '</span></div><br>');	
+					$('#chatBox').append('<div class="msgBox receive"><br>챗봇<br><span> 도움을 요청 하겠습니다 </span></div><br><br>');	
 				}else {
 					cnt = 0;
 				}//end if
