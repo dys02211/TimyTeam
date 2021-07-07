@@ -38,7 +38,7 @@
 			            <li> <a href="${contextPath}" class="smoothScroll">Home</a></li>
 						<li> <a href="#about" class="smoothScroll">About</a></li>
 						<li> <a href="../member/listMembers.do" class="smoothScroll">관리자</a></li>					
-						<li> <a href="../member/warning.do" class="smoothScroll">모니터링</a></li>
+						<li> <a href="../member/warning.do" class="smoothScroll">구조 요청 모니터링</a></li>
 					</ul>
 		        </div><!--/.nav-collapse -->
 		      </div>
